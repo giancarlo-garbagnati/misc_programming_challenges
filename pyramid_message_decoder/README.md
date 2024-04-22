@@ -3,17 +3,17 @@
 This was part of a technical assessment for an interview I took. The prompt was to create a function to decode a message from a .txt file and output the decoded message as a string. Each line of the encoded message .txt was a number followed by a space and a word. The decoded message would be formed by taking the words from specific indices based on if the index was the last (rightmost) number on each row if the numbers were arranged into a “pyramid” (sequentially and in ascending order).
 
 For example, let’s say this is what’s in our encoded message .txt:
-  3 love
-  6 computers
-  2 dogs
-  4 cats
-  1 I
-  5 you
+```3 love
+6 computers
+2 dogs
+4 cats
+1 I
+5 you```
 
 The pyramid that would be formed with these indices would look like this:
-    1
-   2 3
-  4 5 6
+```  1
+ 2 3
+4 5 6```
 
 So you’d take the last (rightmost) number from each row and form a decoded message using those indices. In this example, indices [1,3,6] would be used to form the decoded message string: “I love computers”.
 
