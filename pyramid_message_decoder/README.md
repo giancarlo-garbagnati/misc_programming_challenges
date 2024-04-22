@@ -33,5 +33,5 @@ If the pyramid is incomplete, this wouldn't necessarily work. However if you tak
 
 <details>
   <summary>Included is a sample encoded message .txt (“coding_qual_input.txt”). The solution for this should be:</summary>
-  >“design all skill whole check deal wish visit now moment offer planet people electric lot huge system card current man way our parent wait”
+  “design all skill whole check deal wish visit now moment offer planet people electric lot huge system card current man way our parent wait”
 </details>
