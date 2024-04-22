@@ -1,28 +1,28 @@
-
-
-
-
 Coding Exercise: Decoding a Message from a Text File
-In this exercise, you will develop a function named decode(message_file). This function should read an encoded message from a .txt file and return its decoded version as a string.
 
-Note that you can write your code using any language and IDE you want (Python is preferred if possible, but not mandatory).
+This was part of a technical assessment for an interview I took. The prompt was to create a function to decode a message from a .txt file and output the decoded message as a string. Each line of the encoded message .txt was a number followed by a space and a word. The decoded message would be formed by taking the words from specific indices based on if the index was the last (rightmost) number on each row if the numbers were arranged into a “pyramid” (sequentially and in ascending order).
 
-Your function must be able to process an input file with the following format:
-
+For example, let’s say this is what’s in our encoded message .txt:
 3 love
 6 computers
 2 dogs
 4 cats
 1 I
 5 you
-In this file, each line contains a number followed by a word. The task is to decode a hidden message based on the arrangement of these numbers into a "pyramid" structure. The numbers are placed into the pyramid in ascending order, with each line of the pyramid having one more number than the line above it. The smallest number is 1, and the numbers increase consecutively, like so:
 
+The pyramid that would be formed with these indices would look like this:
   1
  2 3
 4 5 6
-The key to decoding the message is to use the words corresponding to the numbers at the end of each pyramid line (in this example, 1, 3, and 6). You should ignore all the other words. So for the example input file above, the message words are:
 
-1: I
-3: love
-6: computers
-and your function should return the string "I love computers".
+So you’d take the last (rightmost) number from each row and form a decoded message using those indices. In this example, indices [1,3,6] would be used to form the decoded message string: “I love computers”.
+
+The prompt wasn’t specific if the input of the function was the file object read in or the string from reading the file object, so both solutions were implemented. Additionally, some assumptions had to be made: (1) all the indices were sequential from 1 to the last word’s index and (2) there were no duplicate indices. Also, the prompt wasn’t clear if we were to assume the pyramid was complete or if the solution had to accommodate “incomplete” pyramids, however my solution should cover both cases.
+
+Solution:
+My solution for this revolved around using the triangular number series equation ( (n+1)(n)/2 ) for the indices of the message. If the pyramid is "full" (and the message's word indices are all sequential numbers starting from 1), the highest index number in the message (ie the last word in the decoded message) can be used to solve for n in the triangular number series equation and determine the length of the message (ie how many rows there are in the pyramid). Then you can go back and fill in the rest of the message starting from 1 using the triangular number series equation to get the indices of each word (and using the last index's word as the last word in the message).
+
+If the pyramid is incomplete, this wouldn't necessarily work. However if you take the result from the "solve for n using the max index" step (which won't be a whole number if the pyramid is incomplete) and get the ceiling of it, that should solve this issue.
+
+The sample encoded message .txt that’s included here “coding_qual_input.txt”’s solution should be: 
+“design all skill whole check deal wish visit now moment offer planet people electric lot huge system card current man way our parent wait”
