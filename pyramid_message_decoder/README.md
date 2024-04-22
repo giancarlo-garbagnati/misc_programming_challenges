@@ -29,5 +29,7 @@ My solution for this revolved around using the triangular number series equation
 
 If the pyramid is incomplete, this wouldn't necessarily work. However if you take the result from the "solve for n using the max index" step (which won't be a whole number if the pyramid is incomplete) and get the ceiling of it, that should solve this issue.
 
-The sample encoded message .txt that’s included here “coding_qual_input.txt”’s solution should be: 
-“design all skill whole check deal wish visit now moment offer planet people electric lot huge system card current man way our parent wait”
+<h4>Specific Solution</h4>
+
+Included is a sample encoded message .txt (“coding_qual_input.txt”). The solution for this should be:
+>!“design all skill whole check deal wish visit now moment offer planet people electric lot huge system card current man way our parent wait”
