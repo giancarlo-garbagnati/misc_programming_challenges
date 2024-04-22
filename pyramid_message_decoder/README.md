@@ -13,9 +13,11 @@ For example, let’s say this is what’s in our encoded message .txt:
 ```
 
 The pyramid that would be formed with these indices would look like this:
->  1
-> 2 3
->4 5 6
+```
+  1
+ 2 3
+4 5 6
+```
 
 So you’d take the last (rightmost) number from each row and form a decoded message using those indices. In this example, indices [1,3,6] would be used to form the decoded message string: “I love computers”.
 
