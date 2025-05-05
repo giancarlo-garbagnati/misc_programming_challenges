@@ -41,7 +41,7 @@ SELECT s.Name
 FROM Salesperson s
 LEFT JOIN Orders o
 ON s.ID = o.salesperson_id
-GROUP BY o.salesperson_id
+GROUP BY o.salesperson_id, s.Name
 HAVING COUNT(o.salesperson_id) > 1;
 
 /*
