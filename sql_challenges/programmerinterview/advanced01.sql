@@ -37,7 +37,12 @@ from the tables above. You can assume that each salesperson only has one ID.
 
 -- My solution
 
-
+SELECT s.Name
+FROM Salesperson s
+LEFT JOIN Orders o
+ON s.ID = o.salesperson_id
+GROUP BY o.salesperson_id
+HAVING COUNT(o.salesperson_id) > 1;
 
 /*
 If that is the case, then what (if anything) is wrong with the following SQL?:
