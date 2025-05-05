@@ -1,3 +1,5 @@
+-- https://www.programmerinterview.com/database-sql/advanced-sql-interview-questions-and-answers/
+
 CREATE TABLE Salesperson (
     ID INT PRIMARY KEY,
     Name VARCHAR(50),
