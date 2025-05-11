@@ -1,1 +1,1 @@
-Here are some of the practice questions on their careers platform and my solutions.
+Here are some of the practice questions on the Meta careers platform and my solutions.
