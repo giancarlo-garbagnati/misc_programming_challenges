@@ -73,5 +73,4 @@ FROM (
   JOIN sales s
   ON pd.product_id = s.product_id
   GROUP BY product_category
-  ORDER BY total_units_sold
 ) a, product_classes b;
